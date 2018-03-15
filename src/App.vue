@@ -11,6 +11,8 @@
             <el-menu-item index="3">导航页面3</el-menu-item>
             <el-menu-item index="4">导航页面4</el-menu-item>
             <el-menu-item index="5">导航页面5</el-menu-item>
+            <el-menu-item index="6" @click="back" >返回</el-menu-item>
+            <el-menu-item index="7" @click="home" >首页</el-menu-item>
           </el-menu>
         </el-col>
       </el-row>
@@ -63,6 +65,14 @@
       data: function (){
         return {
           active:true
+        }
+      },
+      methods: {
+        back(){
+            this.$router.back(-1)
+        },
+        home() {
+            this.$router.next({path:"/home"})
         }
       }
     }

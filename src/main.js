@@ -15,7 +15,7 @@ Vue.prototype.axios = axios;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  store, //install vuex
+  store, 
   router,
   components: { App },
   template: '<App/>',
